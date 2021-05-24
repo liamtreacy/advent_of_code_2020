@@ -1,8 +1,10 @@
-ThisBuild / scalaVersion     := "2.13.3"
-ThisBuild / version          := "0.0.1"
-
-lazy val sample = (project in file("."))
-  .settings(
-    name := "Advent of Code 2020",
-    libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.7" % "test"
+lazy val root = (project in file(".")).
+  settings(
+    inThisBuild(List(
+      organization := "com.example",
+      scalaVersion := "2.13.3"
+    )),
+    name := "scalatest-example"
   )
+
+libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.2" % Test
