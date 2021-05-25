@@ -5,3 +5,4 @@
 .bloop/
 target/
 project/
+src/test/resources/input_for_puzzle_from_site.txt
