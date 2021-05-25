@@ -26,4 +26,27 @@ object DayOne extends App {
     }
     (first,second)
   }
+
+    def FindThreeEntriesWhichSumToExpectedValue( contents: List[Int], value: Int) = {
+    var first, second, third = -1
+    breakable {
+      for (i <- 0 until contents.length)
+      {
+        for( j <- i+1 until contents.length)
+        {
+            for( k <- j+1 until contents.length)
+            {
+                if( contents(i) + contents(j) + contents(k) == value)
+                {
+                    first = i
+                    second = j
+                    third = k
+                    break
+                }
+            }
+        }
+      }
+    }
+    (first,second, third)
+  }
 }
