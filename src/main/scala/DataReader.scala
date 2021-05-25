@@ -1,5 +1,5 @@
 object DataReader{
-    def readFile(filename: String): Seq[Any] = {
+    def readFile(filename: String): List[Any] = {
         var lines = List[Any]()
         try {
             val bufferedSource = io.Source.fromFile(filename)

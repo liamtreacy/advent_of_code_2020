@@ -17,4 +17,14 @@ class DayOneSpec extends org.scalatest.funsuite.AnyFunSuite {
     val l = List(1,5,7,6,8,13,15,2)
     assert(DayOne.FindEntriesWhichSumToExpectedValue(l, 10) equals (4,7))
   }
+
+    test("DayOne Solution") {
+    val l = DataReader.readFile(getClass.getResource("/input_for_puzzle_from_site.txt").getPath).map(_.toString.toInt)
+    val soln = DayOne.FindEntriesWhichSumToExpectedValue(l, 2020)
+    // Multiply the following two for the answer
+    //println(l(76))
+    //println(l(173))
+    assert(soln equals (76,173)
+)
+  } 
 }

@@ -1,13 +1,11 @@
 import scala.util.control.Breaks._
 
 // Find the two entries that sum to 2020; what do you get if you multiply them together?
-object DayOne {
+object DayOne extends App {
   def GetDayOneAnswer: Unit = {
-    val contents = DataReader.sumValuesFromFile("")
-
-    val positions = 1
     var entries = DataReader.readFile("").toList.map(_.toString.toInt)
-    val (first, second) = FindEntriesWhichSumToExpectedValue(entries, 2020)
+    val soln = FindEntriesWhichSumToExpectedValue(entries, 2020)
+    println(soln)
   }
 
   def FindEntriesWhichSumToExpectedValue( contents: List[Int], value: Int) = {
